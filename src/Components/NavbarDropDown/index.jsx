@@ -14,19 +14,19 @@ function NavbarDropDownComponent() {
             {
                 navbarDropDowns.map((x, i) => {
                     return (
-                        <li className='li-of-Navbar-DropDown' key={i}>
+                        <li className='li-of-Navbar-DropDown position-relative' key={i}>
                             <div onMouseOver={(index) => openDropDown(i + 1)}>
                                 {
                                     x.dropDownName
                                 }
                                 <FaAngleDown />
                             </div>
-                            <div className="subDropDownDiv position-absolute">
+                            <div className="subDropDownDiv">
 
                                 {
                                     x.dropDowns.map((singleDropDown, subIndex) => {
                                         return (
-                                            <div id={`singleDivOfDropDown${subIndex}`}>
+                                            <div key={subIndex} id={`singleDivOfDropDown${subIndex}`}>
                                                 {
                                                     singleDropDown
                                                 }
